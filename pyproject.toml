@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "yolov8_classificacao"
+version = "0.1.0"
+description = ""
+authors = ["Igor <igor.mart.san@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+opencv-python = "^4.7.0.72"
+ultralytics = "^8.0.120"
+
+[tool.poetry.dev-dependencies]
+poethepoet = "0.20"
+
+[tool.poe.tasks]
+cuda118 = 'pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118'
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
